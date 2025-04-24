@@ -1,0 +1,10 @@
+[default]
+account = "pdgdjeb-isb41344"
+user = "jamie"
+password = "Fremont@123456"
+# optional
+# warehouse = "<YOUR COMPUTE WH>"
+# optional
+# database = "<YOUR DATABASE>"
+# optional
+# schema = "<YOUR SCHEMA>"
