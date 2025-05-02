@@ -1,0 +1,17 @@
+definition_version: 1
+snowpark:
+  project_name: "order_update_sp"
+  stage_name: "hol_db.harmonized.deployment"
+  src: "order_update/"
+  procedures  : 
+    - name: "order_update_sp"
+      database: hol_db
+      schema: HARMONIZED
+      handler: order_update.procedure.main
+      runtime: 3.10
+      imports:
+      - '@packages/snowflake-snowpark-python/1.5.1'
+      signature: 
+      returns: STRING
+
+  

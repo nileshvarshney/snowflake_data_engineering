@@ -1,0 +1,15 @@
+definition_version: 1
+snowpark:
+  project_name: "sample_proj"
+  stage_name: "hol_db.analytics.deployment"
+  src: "src/"
+  functions:
+    - name: my_upper
+      database: hol_db
+      schema: analytics
+      handler: src.my_upper.my_upper
+      runtime: 3.8
+      returns: STRING
+      signature:
+      - name: s
+        type: STRING

@@ -1,0 +1,15 @@
+definition_version: 1
+snowpark:
+  project_name: "05_fahrenheit_to_celsius_udf"
+  stage_name: "hol_db.analytics.deployment"
+  src: "fahrenheit_to_celsius_udf/"
+  functions: 
+    - name: "fahrenheit_to_celsius_udf"
+      database: hol_db
+      schema: analytics
+      handler: fahrenheit_to_celsius_udf.function.f_to_celsius_udf
+      runtime: 3.10
+      signature: 
+      - name: temp_f
+        type: FLOAT
+      returns: FLOAT
